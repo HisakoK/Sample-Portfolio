@@ -1,0 +1,12 @@
+const navTaggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav__link');
+
+navTaggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('nav-open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    document.body.classList.remove('nav-open');
+  })
+})
